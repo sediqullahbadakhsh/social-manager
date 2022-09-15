@@ -9,6 +9,13 @@ body {
   background-color: aliceblue;
   color: gray;
 }
+.main-page {
+  display: flex;
+  flex-direction: row;
+  .nav-area {
+    width: 15%;
+  }
+}
 .posts-container {
   margin: 20px;
   padding: 20px;
@@ -50,7 +57,7 @@ body {
     .posts {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
+      gap: 40px;
       align-items: center;
       justify-content: center;
       .post {
