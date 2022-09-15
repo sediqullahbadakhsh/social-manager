@@ -5,15 +5,17 @@ const Accordion = ({ icon, nav, content }) => {
 
   return (
     <div className="accordion-item">
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <div>{icon}</div>
-        <div>{nav}</div>
-        <div>{isActive ? "-" : "+"}</div>
+      <div className="accordion-titles" onClick={() => setIsActive(!isActive)}>
+        <div className="accordion-title">
+          <div style={{ color: "red", fill: "red" }}>{icon}</div>
+          <div>{nav}</div>
+        </div>
+        <div style={{ fontSize: "15px" }}>{isActive ? "-" : "+"}</div>
       </div>
       {isActive && (
         <div className="accordion-content">
           {content.map((item) => (
-            <p>{item}</p>
+            <p style={{ paddingLeft: "30px", fontSize: "13px" }}>{item}</p>
           ))}
         </div>
       )}

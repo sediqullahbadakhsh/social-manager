@@ -36,15 +36,39 @@ body {
 
       .sidebar {
         background-color: rgba(0, 0, 0, 0.658);
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        width: 45px;
+        gap: 15px;
+        cursor: pointer;
+        div > svg {
+          opacity: 0.5;
+        }
       }
       .accordion {
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.281);
+        background-color: rgba(0, 0, 0, 0.432);
       }
     }
   }
   .content-area {
     margin-left: 15%;
+  }
+}
+.accordion-item {
+  color: #fff;
+  font-size: 14px;
+  .accordion-titles {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    .accordion-title {
+      display: flex;
+      gap: 3px;
+    }
   }
 }
 .posts-container {
@@ -154,4 +178,8 @@ body {
 .active {
   border-left: solid 4px red;
   border-radius: 4px;
+  opacity: 1 !important;
+  div > svg {
+    opacity: 1;
+  }
 }

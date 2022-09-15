@@ -2,12 +2,11 @@ import { useState } from "react";
 import image from "../assets/sociality.png";
 import Accordion from "./Accordion";
 import { accordiondata } from "./accordionData";
+import { FcCdLogo, FcWiFiLogo, FcDvdLogo } from "react-icons/fc";
 const Navbar = () => {
   const [color, setColor] = useState("");
-  const [show, setShow] = useState(false);
   const toggleClick = (e) => {
     setColor(e.target.id);
-    setShow((current) => !current);
   };
 
   return (
@@ -17,23 +16,27 @@ const Navbar = () => {
       </div>
       <navbar className="navbar">
         <div className="sidebar">
-          <ul>
-            <li
+          <div>
+            <FcCdLogo
               onClick={toggleClick}
               id="one"
               className={color === "one" ? "active" : ""}
-            >
-              one
-            </li>
-            <li
+            />
+          </div>
+          <div>
+            <FcDvdLogo
               onClick={toggleClick}
               id="two"
               className={color === "two" ? "active" : ""}
-            >
-              Tow
-            </li>
-            <li>Three</li>
-          </ul>
+            />
+          </div>
+          <div>
+            <FcWiFiLogo
+              onClick={toggleClick}
+              id="three"
+              className={color === "three" ? "active" : ""}
+            />
+          </div>
         </div>
         <div className="accordion">
           {accordiondata.map(({ nav, content, icon }) => (

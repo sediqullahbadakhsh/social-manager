@@ -8,7 +8,7 @@ export const accordiondata = [
   { icon: <GrNotification />, nav: "NOTIFICATIONS", content: ["notify"] },
   { icon: <FcStatistics />, nav: "SUMMARY", content: [] },
   { icon: <GiNotebook />, nav: "PUBLISH", content: ["Compose", "Feed"] },
-  { icon: <TiMessages />, nav: "PUBLISH", content: [] },
-  { icon: <TbDeviceWatchStats2 />, nav: "PUBLISH", content: [] },
+  { icon: <TiMessages />, nav: "ENGAGE", content: [] },
+  { icon: <TbDeviceWatchStats2 />, nav: "LISTEN", content: [] },
   { icon: <HiDocumentReport />, nav: "REPORT", content: ["Montly", "Weekly"] },
 ];
