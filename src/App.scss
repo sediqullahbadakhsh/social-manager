@@ -1,0 +1,28 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.posts-container {
+  margin: 20px;
+  padding: 20px;
+  .posts-by-date {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    .date {
+      padding: 15px 0;
+    }
+    .posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .post-image {
+    width: 350px;
+  }
+}

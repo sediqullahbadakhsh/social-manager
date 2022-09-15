@@ -4,8 +4,11 @@ import { TbDotsCircleHorizontal, TbMessageCircle } from "react-icons/tb";
 import { TiTick } from "react-icons/ti";
 import { AiOutlineLike } from "react-icons/ai";
 const Posts = ({ date }) => {
+  const image = (imgName) => {
+    return require(`../assets/${imgName}`);
+  };
   return (
-    <div>
+    <div className="posts">
       {date.map((post) => (
         <div key={post.id} className="post">
           <div className="post-status">
@@ -24,7 +27,11 @@ const Posts = ({ date }) => {
               </div>
             </div>
             <p className="post-description">{post.entry.message}</p>
-            <p className="post-image">{post.entry.image}</p>
+            <img
+              src={image(post.entry.image)}
+              className="post-image"
+              alt={post.entry.message}
+            />
             <div className="post-actions">
               <AiOutlineLike />
               <TbMessageCircle />

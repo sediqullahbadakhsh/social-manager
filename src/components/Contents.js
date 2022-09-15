@@ -8,7 +8,7 @@ const Contents = () => {
     <div className="posts-container">
       {values.map((date) => (
         <div key={date[0]} className="posts-by-date">
-          {date[0]}
+          <p className="date">{date[0]}</p>
           <Posts date={date[1]} />
         </div>
       ))}
