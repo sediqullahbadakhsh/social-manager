@@ -1,37 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import data from "../data/data.json";
+import Posts from "./Posts";
 const Contents = () => {
-  //   const values = Object.values(data.posts_by_date["2021-06-17"]);
   const values = Object.entries(data.posts_by_date);
-  useEffect(() => {
-    console.log(data.posts_by_date["2021-06-17"]);
-    console.log(values[1]);
-  });
+
   return (
-    <div>
-      {/* {Object.keys(data).map((d, key) => (
-        <div key={key}>{d}</div>
-      ))} */}
-      {/* {values.map((item) => (
-        <div key={item.id}>
-          {Object.values(item.entry).map((item, index) => (
-            <p key={index}>{item}</p>
-          ))}
-        </div>
-      ))} */}
+    <div className="posts-container">
       {values.map((date) => (
-        <div key={date[0]}>
+        <div key={date[0]} className="posts-by-date">
           {date[0]}
-          {date[1].map((post) => (
-            <div key={post.id}>
-              <p>{post.published_at}</p>
-              <p>{post.status}</p>
-              <p>{post.entry.image}</p>
-              <p>{post.entry.message}</p>
-              <p>{post.account.name}</p>
-              <p>{post.account.username}</p>
-            </div>
-          ))}
+          <Posts date={date[1]} />
         </div>
       ))}
     </div>
