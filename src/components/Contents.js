@@ -17,6 +17,29 @@ const Contents = () => {
 
   return (
     <div className="posts-container">
+      <div className="posts-top">
+        <div className="status">
+          <p className="stat-dot">
+            <p className="dot" style={{ backgroundColor: "#ABACAE" }}></p>{" "}
+            Published
+          </p>
+          <p className="stat-dot">
+            <p className="dot" style={{ backgroundColor: "#32C687" }}></p>{" "}
+            Scheduled
+          </p>
+          <p className="stat-dot">
+            <p className="dot" style={{ backgroundColor: "#FEBC2D" }}></p> Need
+            Approval
+          </p>
+          <p className="stat-dot">
+            <p className="dot" style={{ backgroundColor: "#EF6D42" }}></p> Error
+          </p>
+          <p className="stat-dot">
+            <p className="dot" style={{ backgroundColor: "#5DB3FE" }}></p> Notes
+          </p>
+        </div>
+        <div className="profile-section"></div>
+      </div>
       {values.map((date) => (
         <div key={date[0]} className="posts-by-date">
           <p className="date">{dateFormatter(date[0])}</p>

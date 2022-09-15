@@ -13,17 +13,14 @@ const Posts = ({ date }) => {
   useEffect(() => {
     date.map((post) => {
       if (post.status === 0) {
-        setColor("#ABACAE");
-      }
-      if (post.status === 1) {
-        setColor("#32C687");
-      }
-      if (post.status === 2) {
-        setColor("#FEBC2D");
-      }
-      if (post.status === 3) {
-        setColor("#EF6D42");
-      } else setColor("#5DB3FE");
+        return setColor("#ABACAE");
+      } else if (post.status === 1) {
+        return setColor("#32C687");
+      } else if (post.status === 2) {
+        return setColor("#FEBC2D");
+      } else if (post.status === 3) {
+        return setColor("#EF6D42");
+      } else return setColor("#5DB3FE");
     });
   });
   return (
