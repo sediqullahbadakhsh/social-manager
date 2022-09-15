@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { BsShare, BsCardImage, BsEye } from "react-icons/bs";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { TbDotsCircleHorizontal, TbMessageCircle } from "react-icons/tb";
@@ -7,12 +9,28 @@ const Posts = ({ date }) => {
   const image = (imgName) => {
     return require(`../assets/${imgName}`);
   };
+  const [color, setColor] = useState("");
+  useEffect(() => {
+    date.map((post) => {
+      if (post.status === 0) {
+        setColor("#ABACAE");
+      }
+      if (post.status === 1) {
+        setColor("#32C687");
+      }
+      if (post.status === 2) {
+        setColor("#FEBC2D");
+      }
+      if (post.status === 3) {
+        setColor("#EF6D42");
+      } else setColor("#5DB3FE");
+    });
+  });
   return (
     <div className="posts">
       {date.map((post) => (
         <div key={post.id} className="post">
-          <div className="post-status">
-            <p>{post.status}</p>
+          <div className="post-status" style={{ backgroundColor: color }}>
             <p>
               <BsCardImage style={{ fill: "#fff" }} />
             </p>
