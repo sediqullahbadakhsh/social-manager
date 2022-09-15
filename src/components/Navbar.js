@@ -1,8 +1,11 @@
+import image from "../assets/sociality.png";
 const Navbar = () => {
   return (
     <div>
-      <div className="Logo">Logo</div>
-      <navbar>
+      <div className="logo">
+        <img src={image} alt="sociality" />
+      </div>
+      <navbar className="navbar">
         <div className="sidebar">
           <ul>
             <li>one</li>
