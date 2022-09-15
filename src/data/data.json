@@ -8,7 +8,7 @@
         "status": 3,
         "entry": {
           "type": "photo",
-          "message": "Lorem ipsum dolor sit amet, consecteturat\r\n adipiscing elit, sed do eiusmod tempor \r\nincididunt? http://bit.ly/145HD7S ",
+          "message": "Lorem ipsum dolor sit amet, consecteturat\r\n adipiscing elit, sed do eiusmod tempor \r\nincididunt? ",
           "image": ["no-post-image.png"],
           "video": null
         },
@@ -30,7 +30,7 @@
         "status": 3,
         "entry": {
           "type": "photo",
-          "message": "Lorem ipsum dolor sit amet, consecteturat\r\n adipiscing elit, sed do eiusmod tempor \r\nincididunt? http://bit.ly/145HD7S ",
+          "message": "Lorem ipsum dolor sit amet, consecteturat\r\n adipiscing elit, sed do eiusmod tempor \r\nincididunt? ",
           "image": ["no-post-image.png"]
         },
         "updated_at": "2021-06-17 08:41:15",
@@ -51,7 +51,7 @@
         "status": 3,
         "entry": {
           "type": "photo",
-          "message": "Lorem ipsum dolor sit amet, consecteturat\r\n adipiscing elit, sed do eiusmod tempor \r\nincididunt? http://bit.ly/145HD7S ",
+          "message": "Lorem ipsum dolor sit amet, consecteturat\r\n adipiscing elit, sed do eiusmod tempor \r\nincididunt? ",
           "image": ["no-post-image.png"]
         },
         "updated_at": "2021-06-17 08:41:01",

@@ -14,7 +14,7 @@ const Posts = ({ date }) => {
           <div className="post-status">
             <p>{post.status}</p>
             <p>
-              <BsCardImage />
+              <BsCardImage style={{ fill: "#fff" }} />
             </p>
           </div>
           <div className="post-content">
@@ -33,10 +33,18 @@ const Posts = ({ date }) => {
               alt={post.entry.message}
             />
             <div className="post-actions">
-              <AiOutlineLike />
-              <TbMessageCircle />
-              <BsShare />
-              <BsEye />
+              <p>
+                <AiOutlineLike /> 0
+              </p>
+              <p>
+                <TbMessageCircle /> 0
+              </p>
+              <p>
+                <BsShare /> 0
+              </p>
+              <p>
+                <BsEye /> 0
+              </p>
             </div>
           </div>
         </div>

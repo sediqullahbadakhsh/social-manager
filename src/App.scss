@@ -3,10 +3,15 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: aliceblue;
 }
 .posts-container {
   margin: 20px;
   padding: 20px;
+
   .posts-by-date {
     display: flex;
     flex-direction: column;
@@ -17,12 +22,63 @@ html {
     .posts {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 40px;
+      gap: 30px;
       align-items: center;
       justify-content: center;
+      .post {
+        // border: 1px solid rgb(204, 204, 204);
+        box-shadow: 0.5px 0.5px rgb(192, 192, 192);
+        width: 350px;
+        display: flex;
+        border-radius: 7px;
+        background-color: #fff;
+        .post-status {
+          width: 80px;
+          background-color: aqua;
+          border: 1px solid aqua;
+          border-top-left-radius: 7px;
+          border-bottom-left-radius: 7px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          justify-content: center;
+        }
+        .post-content {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .post-header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            color: gray;
+            font-size: 15px;
+            .post-options {
+              display: flex;
+              gap: 10px;
+            }
+          }
+          .post-description {
+            color: rgb(109, 109, 109);
+            font-size: 14px;
+            padding-bottom: 10px;
+          }
+          .post-image {
+            width: 100%;
+            padding-bottom: 15px;
+          }
+          .post-actions {
+            display: flex;
+            gap: 30px;
+            color: gray;
+          }
+        }
+      }
     }
   }
-  .post-image {
-    width: 350px;
+  svg {
+    cursor: pointer;
   }
 }
